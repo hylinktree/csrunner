@@ -6,7 +6,7 @@
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <!--TargetFramework>netcoreapp3.1</TargetFramework-->
-    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>net5.0</TargetFrameworkVersion>
   </PropertyGroup>
 
 </Project>
