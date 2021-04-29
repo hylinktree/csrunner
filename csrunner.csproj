@@ -5,8 +5,8 @@
     <PlatformTarget>x64</PlatformTarget>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <!--TargetFrameworkVersion>v4.5</TargetFrameworkVersion-->
+    <!--TargetFramework>netcoreapp3.1</TargetFramework-->
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
   </PropertyGroup>
 
 </Project>
