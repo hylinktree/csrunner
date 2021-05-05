@@ -2,7 +2,7 @@ using System;
 using System.Threading;
 using System.IO;
 using System.Collections.Generic;
-using Newtonsoft.Json;
+// using Newtonsoft.Json;
 // using Thread;
 
 namespace csrunner
@@ -11,6 +11,15 @@ namespace csrunner
     public class jUtils
     {
         private static readonly DateTime _epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+
+        public static string InFile(string fname)
+        {
+            try
+            {
+                return File.ReadAllText(fname);
+            }
+            catch { return null; }
+        }
 
         public static void CreateDir(string dirname)
         {
@@ -94,15 +103,15 @@ namespace csrunner
             if (join) t.Join(); else mSleep(100);
         }
 
-        public static string toJson(object obj)
-        {
-            return JsonConvert.SerializeObject(obj, Newtonsoft.Json.Formatting.Indented);
-        }
+        // public static string toJson(object obj)
+        // {
+        //     return JsonConvert.SerializeObject(obj, Newtonsoft.Json.Formatting.Indented);
+        // }
 
-        public static string toJsonNP(object obj)
-        {
-            return JsonConvert.SerializeObject(obj, Newtonsoft.Json.Formatting.None);
-        }
+        // public static string toJsonNP(object obj)
+        // {
+        //     return JsonConvert.SerializeObject(obj, Newtonsoft.Json.Formatting.None);
+        // }
     }
     public class iList<T> : List<T>
     {
