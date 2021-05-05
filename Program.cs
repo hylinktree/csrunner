@@ -97,7 +97,7 @@ namespace csrunner
             string filename, arguments;
             filename = ss[0];
             Console.WriteLine("cmd = "+filename);
-            arguments = (ss.Length > 1) ? ss[1]:"";
+            arguments = (ss.Length > 1) ? ss[1]+"\n":"";
             Console.WriteLine("args = "+arguments);
             jUtils.Run(filename, arguments);
 	}
