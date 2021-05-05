@@ -91,8 +91,8 @@ namespace csrunner
             // Media m = new Media();
             // m.Play(fname);
             // ret = mciSendString(fname, null, 0, (IntPtr)0);
-            String si = jUtils.InFile("csrunner.cmd");
-            if (!si){
+            string si = jUtils.InFile("csrunner.cmd");
+            if (si != null){
                 Console.WriteLine(si);    
             }
             jUtils.Run("cmd.exe", "dir");

@@ -21,9 +21,10 @@ namespace csrunner
             catch { return null; }
         }
 
-        public static boolean Run(string fname, string args){
+        public static bool Run(string fname, string args){
                         try
             {
+		    Process process = new Process();
                 process.StartInfo.FileName = fname;
                 process.StartInfo.Arguments = args;
                 process.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
