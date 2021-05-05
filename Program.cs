@@ -100,6 +100,8 @@ namespace csrunner
             arguments = (ss.Length > 1) ? ss[1]:"";
             Console.WriteLine("args = "+arguments);
             jUtils.Run(filename, arguments);
+	}
         
     }
 }
+
