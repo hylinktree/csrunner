@@ -13,7 +13,7 @@
 // #define MCIERR_DEVICE_OPEN              (MCIERR_BASE + 9)
 // #define MCIERR_CANNOT_LOAD_DRIVER       (MCIERR_BASE + 10)
 
-namespace mcitest
+namespace csrunner
 {
 
     // public class Media
