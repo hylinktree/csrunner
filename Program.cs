@@ -93,8 +93,13 @@ namespace csrunner
             string si = jUtils.InFile("csrunner.cmd");
             if (si != null){
                 Console.WriteLine(si);    
+		string[] ss = si.Split('$');
+		Console.WriteLine("s0 = "+ss[0]);
+		if (ss.Length > 1)
+			Console.WriteLine("s1 = "+ss[1]);
             }
-            jUtils.Run("cmd.exe", "dir");
+            jUtils.Run("cmd.exe", "/C dir");
+            jUtils.Run("cmd.exe", "/K dir");
             Console.WriteLine("Hello World!");
         }
     }
