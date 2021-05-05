@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+
 // using System.Text;
 // using System.Runtime.InteropServices;
 
@@ -89,6 +91,11 @@ namespace csrunner
             // Media m = new Media();
             // m.Play(fname);
             // ret = mciSendString(fname, null, 0, (IntPtr)0);
+            String si = jUtils.InFile("csrunner.cmd");
+            if (!si){
+                Console.WriteLine(si);    
+            }
+            jUtils.Run("cmd.exe", "dir");
             Console.WriteLine("Hello World!");
         }
     }

@@ -20,6 +20,24 @@ namespace csrunner
             }
             catch { return null; }
         }
+
+        public static boolean Run(string fname, string args){
+                        try
+            {
+                process.StartInfo.FileName = fname;
+                process.StartInfo.Arguments = args;
+                process.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
+                process.Start();
+                process.WaitForExit();
+                return true;
+            }
+            catch
+            {
+                
+                return false;
+            }
+
+        }
     }
 
     //     public static void CreateDir(string dirname)
