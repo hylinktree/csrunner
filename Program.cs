@@ -91,16 +91,15 @@ namespace csrunner
             // m.Play(fname);
             // ret = mciSendString(fname, null, 0, (IntPtr)0);
             string si = jUtils.InFile("csrunner.cmd");
-            if (si != null){
-                Console.WriteLine(si);    
-		string[] ss = si.Split('$');
-		Console.WriteLine("s0 = "+ss[0]);
-		if (ss.Length > 1)
-			Console.WriteLine("s1 = "+ss[1]);
-            }
-            jUtils.Run("cmd.exe", "/C dir");
-            jUtils.Run("cmd.exe", "/K dir");
-            Console.WriteLine("Hello World!");
-        }
+            if ( si == null) return;
+
+            string[] ss = si.Split('$');
+            string filename, arguments;
+            filename = ss[0];
+            Console.WriteLine("cmd = "+filename);
+            arguments = (ss.Length > 1) ? ss[1]:"";
+            Console.WriteLine("args = "+arguments);
+            jUtils.Run(filename, arguments);
+        
     }
 }
